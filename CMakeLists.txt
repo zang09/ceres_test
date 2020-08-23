@@ -81,7 +81,7 @@ find_package(Eigen3 REQUIRED)
 ## DEPENDS: system dependencies of this project that dependent projects also need
 
 catkin_package(
-  INCLUDE_DIRS include
+  INCLUDE_DIRS #include
   LIBRARIES origin_local
   CATKIN_DEPENDS roscpp std_msgs sensor_msgs pcl_ros
   DEPENDS system_lib PCL EIGEN3
@@ -90,8 +90,9 @@ catkin_package(
 ###########
 ## Build ##
 ###########
+
 include_directories(
-  include 
+#  include 
   ${catkin_INCLUDE_DIRS} 
   ${PCL_INCLUDE_DIRS}
   ${CERES_INCLUDE_DIRS}
